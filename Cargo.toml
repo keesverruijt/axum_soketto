@@ -1,0 +1,18 @@
+[package]
+name = "axum_soketto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.5"
+env_logger = "0.11.5"
+futures = "0.3.30"
+http-body-util = "0.1.2"
+hyper = { version = "1.4.1", features = ["http1", "server"] }
+hyper-util = "0.1.7"
+log = "0.4.22"
+# soketto = { version = "0.8.0", features = ["deflate", "http"] }
+soketto = { git="https://github.com/keesverruijt/soketto.git", branch = "context_takeover", features = ["deflate", "http"] }
+tokio = { version = "1.40.0", features = ["rt-multi-thread"] }
+tokio-util = { version = "0.7.11", features = ["compat"] }
+tower = { version = "0.5.0", features = ["util"] }

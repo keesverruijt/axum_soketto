@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'axum_soketto'",
+            "env": { "RUST_LOG": "trace" },
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=axum_soketto",
+                    "--package=axum_soketto"
+                ],
+                "filter": {
+                    "name": "axum_soketto",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'axum_soketto'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=axum_soketto",
+                    "--package=axum_soketto"
+                ],
+                "filter": {
+                    "name": "axum_soketto",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
