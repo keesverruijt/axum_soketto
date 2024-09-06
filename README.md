@@ -8,14 +8,15 @@ and Soketto's [hyper-server](https://github.com/paritytech/soketto/blob/master/e
 
 # Demo
 
-run this demo with:
+Run this demo with:
 
-    RUST_LOG=debug cargo run
+    RUST_LOG=trace cargo run
 
 Then, on the same machine, open a browser and go to http://localhost:3000 .
 
-In the output you should see the HTML request and one WebSocket request, with this message:
+You can now send websocket requests, and a reply saying 'Hello <your data>' is sent back.
 
-    [2024-09-05T08:28:46Z DEBUG soketto::connection] xxxxxxx: using extension: permessage-deflate
+Click the 'Enable context takeover' button to allow context to be kept between messages, this will increase the
+compression ratio as the compressed data can refer back to previous message content.
 
 
